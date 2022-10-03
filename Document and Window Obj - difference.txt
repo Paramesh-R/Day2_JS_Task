@@ -1,0 +1,79 @@
+Document Object:
+	• When a webpage is loaded, the browser creates a Document Object Model of the page.
+	• The Document object represent the whole html document as tree of objects (HTML, HEAD, BODY and other HTML tags)
+	• By accessing Document objects, we can access the element in the HTML Page.
+	• We can also add dynamic content to our webpage using Document object.
+	• Document object can be access with window.document  (or) document.
+	• SYNTAX:
+		○ document.property_name;
+	• Some commonly used Properties of document.
+		○ activeElement: returns the currently active elements
+		○ body: returns the content of the body element
+		○ baseURL: returns a string value that represent the base URL of the document
+		○ cookie: returns cookie of the current document
+		○ URL: return complete URL of the document
+	• Methods of Document:
+		○ addEventListener()
+		○ Write(): it is used to write some content or JS code in the document
+		○ Writeln(): write a document with a newline character after each statement
+		○ getElementByName(): return an object containing all the elements with the specified name in the document as objects.
+    Example:
+        <html>
+            <head>
+                <title> Document Object </title> 
+            </head>
+            <body>
+                <button onclick="myFunction()"> Click Me </button>
+                <p id="demo"></p>
+                <script>
+                    function myFunction(){
+                        //Document Properties
+                        var title = document.title;
+                        var domain = document.domain;
+                        var body = document.body;
+                        
+                        // Document Methods
+                        document.getElementById("demo").innerHTML = "Title of the doc is " + title
+                    }
+                </script>
+            </body>
+        </html>
+
+Window Object : 
+	• The window object is the topmost object of the DOM hierarchy.
+	• Window object represent a browser window or frame that display the content of the webpage.
+	• A global variable window, represent the current browser window or tab in which code is running.
+	• SYNTAX:
+		○ window.property_name;
+	• In case of Multi tab browser, a window object represent a single tab, but some of its properties like innerHeight, innerWidth and methods like resizeTo() will affect the whole browser window.
+	• PROPERTIES
+		○ closed: it holds a boolean value that represent whether the window is closed or not
+		○ document: it returns a reference to the document object of that window
+		○ length: It represents the number of frames in the current window
+		○ fullScreen: This property indicates whether the window is displayed on full screen or not.
+		○ innerHeight: It is used to get the height of the content area of the browser window.
+		○ innerWidth: It is used to get the width of the content area of the browser window.
+	• METHODS:
+		○ alert(): It is used to display an alert box. It displays a specified message along with an OK button and is generally used to make sure that the information comes through the user.
+		○ close(): It is used for closing a certain window or tab of the browser which was previously opened.
+		○ open(): It is used to open a new tab or window with the specified URL and name.
+	• Example:
+        <html>
+            <head> <title>Window Object</title></head>
+            <body>
+                <button onclick="demo()">Click here</button>
+                <p id="demo"> </p>
+                
+                <script>
+                    function demo(){
+                    var height = window.innerHeight;
+                    var width = window.innerWidth;
+                    var loc = window.location;
+                    
+                    document.getElementById("prop").innerHTML = "Frame Height:" + height;
+                    }
+                </script>
+                
+            </body>
+        </html>
+            
